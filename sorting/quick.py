@@ -1,4 +1,5 @@
 import unittest
+import random
 
 from tools.sort_master import SortMaster
 
@@ -12,7 +13,10 @@ def swap(seq, i, j):
 def quick_sort(seq):
     if len(seq) <= 1:
         return seq
-    pivot = seq[-1]
+    pivot_place = random.randint(0, len(seq)-1) 
+    pivot = seq[pivot_place]
+    swap(seq, pivot_place, -1)
+
     leftpart = 0
     for i in range(len(seq)-1):
         if seq[i] <= pivot:
@@ -20,7 +24,6 @@ def quick_sort(seq):
             leftpart+=1
         
     swap(seq, -1, leftpart)
-    print("{}..{} {}..{}".format(0, leftpart, leftpart+1, len(seq)))
     return quick_sort(seq[0:leftpart]) + [pivot] + quick_sort(seq[leftpart+1:])
 
 
