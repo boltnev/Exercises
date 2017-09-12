@@ -11,15 +11,15 @@ def reverse_words(string):
     for i in range(len(string)):
         if string[i] == ' ' and word_begin is not None:
             string[word_begin:i] = reversed(string[word_begin:i])
-            word_begin = None        
+            word_begin = None
         else:
             if word_begin is None:
                 word_begin = i
-    
+
     if word_begin is not None:
         string[word_begin:len(string)] = reversed(string[word_begin:len(string)])
     print(string)
-    
+
     return reversed(string)
 
 
