@@ -2,10 +2,13 @@
 
 from distutils.core import setup
 
-setup(name='Tools',
+setup(name='tools',
       version='1.0',
       description='Tools for Excercises',
       author='Ilya Boltnev',
-      packages=['tools'],
-      package_dir = {'': 'lib'}
+      packages=[
+          'tools',
+#          'tools.mutable_string',
+#          'tools.sort_master',
+      ],
      )

@@ -1,6 +1,6 @@
 import unittest
 
-from .mutable_string import MutableString
+from tools.mutable_string import MutableString
 
 class TestMutableString(unittest.TestCase):
 

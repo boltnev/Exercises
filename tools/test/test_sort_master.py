@@ -1,6 +1,6 @@
 import unittest
 
-from .sort_master import SortMaster
+from tools.sort_master import SortMaster
 
 
 class TestSortMaster(unittest.TestCase):
